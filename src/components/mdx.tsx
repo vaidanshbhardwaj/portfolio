@@ -6,7 +6,7 @@ import { CodeBlock } from "@/once-ui/modules";
 import { HeadingLink } from "@/components";
 
 import { TextProps } from "@/once-ui/interfaces";
-import { SmartImageProps } from "@/once-ui/components/SmartImage";
+// import { SmartImageProps } from "@/once-ui/components/SmartImage";
 
 type TableProps = {
   data: {
@@ -16,7 +16,9 @@ type TableProps = {
 };
 
 function Table({ data }: TableProps) {
-  const headers = data.headers.map((header, index) => <th key={index}>{header}</th>);
+  const headers = data.headers.map((header, index) => (
+    <th key={index}>{header}</th>
+  ));
   const rows = data.rows.map((row, index) => (
     <tr key={index}>
       {row.map((cell, cellIndex) => (
@@ -64,21 +66,20 @@ function CustomLink({ href, children, ...props }: CustomLinkProps) {
   );
 }
 
-function createImage({ alt, src, ...props }: SmartImageProps & { src: string }) {
-  if (!src) {
-    console.error("SmartImage requires a valid 'src' property.");
-    return null;
-  }
-
+// In your mdx.ts file - Just modify this one function
+function createImage({ alt, src, ...props }: { alt: string; src: string }) {
   return (
-    <SmartImage
-      className="my-20"
-      enlarge
-      radius="m"
-      aspectRatio="16 / 9"
-      alt={alt}
+    <img
       src={src}
-      {...props}
+      alt={alt}
+      style={{
+        width: "100%",
+        height: "auto",
+        display: "block",
+        margin: "2rem 0",
+        borderRadius: "8px",
+      }}
+      loading="lazy"
     />
   );
 }
@@ -99,7 +100,10 @@ function createHeading(level: 1 | 2 | 3 | 4 | 5 | 6) {
     const slug = slugify(children as string);
     return (
       <HeadingLink
-        style={{ marginTop: "var(--static-space-24)", marginBottom: "var(--static-space-12)" }}
+        style={{
+          marginTop: "var(--static-space-24)",
+          marginBottom: "var(--static-space-12)",
+        }}
         level={level}
         id={slug}
         {...props}
@@ -149,6 +153,9 @@ type CustomMDXProps = MDXRemoteProps & {
 export function CustomMDX(props: CustomMDXProps) {
   return (
     // @ts-ignore: Suppressing type error for MDXRemote usage
-    <MDXRemote {...props} components={{ ...components, ...(props.components || {}) }} />
+    <MDXRemote
+      {...props}
+      components={{ ...components, ...(props.components || {}) }}
+    />
   );
 }
