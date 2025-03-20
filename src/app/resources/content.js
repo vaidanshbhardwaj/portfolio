@@ -7,8 +7,8 @@ const person = {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  // avatar: "/images/avatar.jpg",
+  location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
@@ -57,7 +57,11 @@ const home = {
     <>
       I'm, <InlineCode>Vaidansh</InlineCode>, creative expert with experience in
       UI/UX Design, Front-End Development, Content Writing, Video Editing,
-      Graphic Design, and AI technologies
+      Graphic Design, and AI technologies.
+      <br />
+      <br />
+      ** This website is still being modified, checkout the about me section to
+      checkout my work experience or checkout the case study below**
     </>
   ),
 };
@@ -78,7 +82,7 @@ const about = {
     link: "https://cal.com",
   },
   intro: {
-    display: true,
+    display: false,
     title: "Introduction",
     description: (
       <>
@@ -136,13 +140,31 @@ const about = {
             src: "/images/work/landing page.png",
             alt: "Cyblinc design",
             width: 16,
-            height: 9,
+            height: 11,
           },
           {
-            src: "/images/work/landing-page-3.png",
+            src: "/images/work/landing page-3.png",
             alt: "Cyblinc layout",
             width: 16,
-            height: 9,
+            height: 11,
+          },
+          {
+            src: "/images/work/landing page-1.png",
+            alt: "Cyblinc layout",
+            width: 16,
+            height: 11,
+          },
+          {
+            src: "/images/work/landing page-2.png",
+            alt: "Cyblinc layout",
+            width: 16,
+            height: 11,
+          },
+          {
+            src: "/images/work/landing page-4.png",
+            alt: "Cyblinc layout",
+            width: 16,
+            height: 7,
           },
         ],
       },
@@ -171,15 +193,19 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Jigyasa University, Dehradun",
+        description: <>Btech CSE</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Ramsheth Thakur Public School, Kharghar Navi Mumbai",
+        description: <>High School and Junior College</>,
+      },
+      {
+        name: "Jindal Vidya Mandir, Bellary, Karnataka",
+        description: <>Primary Education</>,
       },
     ],
   },
@@ -189,39 +215,18 @@ const about = {
     skills: [
       {
         title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
       },
       {
         title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+      },
+      {
+        title: "TypeScript",
+      },
+      {
+        title: "Tailwind CSS",
+      },
+      {
+        title: "Adobe Premiere Pro",
       },
     ],
   },
