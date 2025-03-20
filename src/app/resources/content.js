@@ -114,13 +114,13 @@ const about = {
         ],
         images: [
           {
-            src: "public/images/before.png",
+            src: "/images/reneazybefore.png",
             alt: "Reneazy website design",
             width: 16,
             height: 9,
           },
           {
-            src: "public/images/after.png",
+            src: "/images/reneazyafter.png",
             alt: "Reneazy branding",
             width: 16,
             height: 9,
