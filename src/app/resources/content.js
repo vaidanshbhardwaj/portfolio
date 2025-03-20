@@ -114,13 +114,13 @@ const about = {
         ],
         images: [
           {
-            src: "/images/work/before.png",
+            src: "/images/before.png",
             alt: "Reneazy website design",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/work/after.png",
+            src: "/images/after.png",
             alt: "Reneazy branding",
             width: 16,
             height: 9,
@@ -137,31 +137,31 @@ const about = {
         ],
         images: [
           {
-            src: "/images/work/landing page.png",
+            src: "/images/landingpage.png",
             alt: "Cyblinc design",
             width: 16,
             height: 11,
           },
           {
-            src: "/images/work/landing page-3.png",
+            src: "/images/landingpage-3.png",
             alt: "Cyblinc layout",
             width: 16,
             height: 11,
           },
           {
-            src: "/images/work/landing page-1.png",
+            src: "/images/landingpage-1.png",
             alt: "Cyblinc layout",
             width: 16,
             height: 11,
           },
           {
-            src: "/images/work/landing page-2.png",
+            src: "/images/landingpage-2.png",
             alt: "Cyblinc layout",
             width: 16,
             height: 11,
           },
           {
-            src: "/images/work/landing page-4.png",
+            src: "/images/landingpage-4.png",
             alt: "Cyblinc layout",
             width: 16,
             height: 7,
